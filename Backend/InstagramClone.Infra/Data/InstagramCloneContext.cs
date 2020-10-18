@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using InstagramClone.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace InstagramClone.Infra.Data
 {
@@ -9,15 +10,8 @@ namespace InstagramClone.Infra.Data
 
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("DefaultConnection");
-            base.OnConfiguring(optionsBuilder);
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
         }
     }
 }
